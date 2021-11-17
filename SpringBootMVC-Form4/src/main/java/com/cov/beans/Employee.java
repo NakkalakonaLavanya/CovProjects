@@ -16,7 +16,7 @@ public class Employee {
 	String name;
 	int deptNo;
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "departmentid", nullable = false)
+   @JoinColumn(name = "departmentid", nullable = false)
 	 Department department;
 
 	public Employee(int id, String name, int deptNo, Department department) {
