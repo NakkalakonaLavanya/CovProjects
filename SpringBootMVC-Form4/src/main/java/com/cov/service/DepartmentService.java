@@ -1,5 +1,6 @@
 package com.cov.service;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -7,7 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cov.beans.Department;
-
+import com.cov.beans.Employee;
 import com.cov.exception.InvalidDepartmentIdException;
 
 import com.cov.repository.DepartmentRepository;
@@ -17,10 +18,9 @@ public class DepartmentService {
 	@Autowired
 	DepartmentRepository departmentRepository;
 
-	public List<Department> findAll() {
-//			List<Employee> employee=new ArrayList<Employee>();
+	public List<Department> findAll() {			
+		List<Department> department=new ArrayList<Department>();
 		return departmentRepository.findAll();
-//			return employee;
 
 	}
 

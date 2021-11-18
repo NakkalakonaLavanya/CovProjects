@@ -8,9 +8,14 @@
 </head>
 <body>
 	<h1 align="center">WELCOME TO COVALENSEDIGITAL</h1>
-	<a href="emp">Employee</a>
+	<a href="regEmp">Registration employee</a>
 	<br>
 	<br>
-	<a href="dept">Department</a>
+	<a href="getEmp">show All Employees</a>
+	<br>
+	<br>
+    <a href="getDept">Show Department</a>
+	
+	
 </body>
 </html>
