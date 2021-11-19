@@ -11,7 +11,7 @@
 </head>
 <body>
 	<h2 align="center">Employee Details</h2>
-	<table border="3" bgcolor="pink">
+	<table border="3" bgcolor="pink" align="center">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>

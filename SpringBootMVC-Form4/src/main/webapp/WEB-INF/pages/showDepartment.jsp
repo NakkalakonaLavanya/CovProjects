@@ -10,8 +10,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h2 align="center">Employee Details</h2>
-	<table border="3" bgcolor="pink">
+<h2 align="center">Department List</h2>
+<br>
+<br>
+	<table border="3" bgcolor="pink" align="center">
 		<tr>
 			<th>ID</th>
 			<th>Name</th>
