@@ -13,10 +13,11 @@ import javax.persistence.OneToMany;
 @Entity
 public class Department {
 	@Id
-	int id;
 	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id;
+	
 	String name;
-
+	
 	@OneToMany(mappedBy = "department",fetch = FetchType.EAGER)
 	public List<Employee>employees= new ArrayList<>();
 

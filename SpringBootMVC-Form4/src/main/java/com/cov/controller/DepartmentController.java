@@ -21,8 +21,8 @@ public class DepartmentController {
 	DepartmentService departmentService;
 
 	@RequestMapping(value = "regDept", method = RequestMethod.GET)
-	public ModelAndView newDepartment() {
-		ModelAndView modelAndView = new ModelAndView("newDepartment", "department", new Department());
+	         public ModelAndView newDepartment() {
+		ModelAndView modelAndView = new ModelAndView("newDept", "department", new Department());
 
 		return modelAndView;
 	}

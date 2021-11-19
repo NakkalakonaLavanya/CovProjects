@@ -34,6 +34,7 @@
 	</table>
 	<br>
 	<br>
+	<a href="regDept">Ragistraion department</a>
 	<a href="/">Home</a>
 
 </body>

@@ -19,7 +19,7 @@ public class DepartmentService {
 	DepartmentRepository departmentRepository;
 
 	public List<Department> findAll() {			
-		List<Department> department=new ArrayList<Department>();
+//		List<Department> department=new ArrayList<Department>();
 		return departmentRepository.findAll();
 
 	}

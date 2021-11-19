@@ -49,6 +49,7 @@ public class EmployeeController {
 		System.out.println("Employee to edit : " + empToEdit);
 		ModelAndView modelAndView = new ModelAndView("editEmp", "empToEdit", empToEdit);
 		System.out.println("ModelAndView : " + modelAndView);
+		modelAndView.addObject("departmentService", departmentService);
 		return modelAndView;
 	}
 
