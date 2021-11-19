@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.cov.beans.Employee;
+import com.cov.exception.InvalidDepartmentIdException;
 import com.cov.exception.InvalidEmployeeIdException;
 import com.cov.repository.EmployeeRepository;
 
@@ -14,10 +15,10 @@ import com.cov.repository.EmployeeRepository;
 public class EmployeeService {
 	@Autowired
 	EmployeeRepository employeeRepository;
+
 	public List<Employee> findAll() {
-//		List<Employee> employee=new ArrayList<Employee>();
+
 		return employeeRepository.findAll();
-//		return employee;
 
 	}
 
@@ -53,6 +54,15 @@ public class EmployeeService {
 		employeeRepository.deleteById(id);
 		return employee;
 	}
+
+	public List<Employee> findAllByDeptno(int deptno) throws InvalidDepartmentIdException {
+		List<Employee> employee = employeeRepository.findAllEmployeeDeptno(deptno);
+		if (employee.isEmpty()) {
+			throw new InvalidDepartmentIdException("Department Id " + deptno + "not existing in repository");
+		}
+
+		return employee;
+
+	}
+
 }
-
-
