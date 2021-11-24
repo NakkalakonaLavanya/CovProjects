@@ -1,94 +1,57 @@
+
 package com.cov.controller;
 
 import java.util.List;
-
+import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.servlet.ModelAndView;
-
-import com.cov.beans.Department;
+import org.springframework.web.bind.annotation.RestController;
 import com.cov.beans.Employee;
-import com.cov.exception.InvalidDepartmentIdException;
 import com.cov.exception.InvalidEmployeeIdException;
-import com.cov.service.DepartmentService;
 import com.cov.service.EmployeeService;
 
-@Controller
+@RestController
+@RequestMapping("/employee")
 public class EmployeeController {
+	static Logger logger = Logger.getLogger(EmployeeController.class);
 	@Autowired
 	EmployeeService employeeService;
-	@Autowired
-	DepartmentService departmentService;
 
-	@RequestMapping(value = "regemp", method = RequestMethod.GET)
-	public ModelAndView newEmployee() {
-		ModelAndView modelAndView = new ModelAndView("regEmployee", "employee", new Employee());
-		modelAndView.addObject("departmentService", departmentService);
-		return modelAndView;
+	@GetMapping("/{id}")
+	public Employee find(@PathVariable int id) throws InvalidEmployeeIdException {
+		logger.info("finding a employee with id " + id);
+		Employee employee = employeeService.findById(id);
+		logger.info("employee found with id " + id + " is" + employee.getName());
+		return employee;
 	}
 
-	@RequestMapping(value = "regemp", method = RequestMethod.POST)
-	public ModelAndView saveEmployee(@ModelAttribute("employee") Employee emp) throws InvalidEmployeeIdException {
-		System.out.println("Trying to insert employee : " + emp);
-		System.out.println("Department : " + emp.getDepartment());
-		ModelAndView modelAndView = new ModelAndView("showEmployees");
-		employeeService.save(emp);
-		modelAndView.addObject("emps", employeeService.findAll());
-		return modelAndView;
+	@GetMapping()
+	public List<Employee> findAll() {
+		logger.info("finding all employees");
+		return employeeService.findAll();
 	}
 
-	@RequestMapping(value = "getemps", method = RequestMethod.GET)
-	public ModelAndView findEmployeeAll() throws InvalidEmployeeIdException {
-		ModelAndView modelAndView = new ModelAndView("showEmployees");
-		List<Employee> emps = employeeService.findAll();
-		List<Department> depts = departmentService.findAll();
-
-		modelAndView.addObject("emps", emps);
-		modelAndView.addObject("depts", depts);
-		modelAndView.addObject("departmentService", departmentService);
-		modelAndView.addObject("department", new Department());
-		modelAndView.addObject("employeeService", employeeService);
-		return modelAndView;
+	@PostMapping()
+	public Employee insertPerson(@RequestBody Employee employee) {
+		logger.info("inserting a employee with " + employee.getName());
+		return employeeService.save(employee);
 	}
 
-	@RequestMapping(value = "editEmp", method = RequestMethod.GET)
-	public ModelAndView editEmp(@RequestParam int id) throws InvalidEmployeeIdException {
-		Employee empTOEdit = employeeService.findById(id);
-		ModelAndView modelAndView = new ModelAndView("editEmp", "empToEdit", empTOEdit);
-		modelAndView.addObject("departmentService", departmentService);
-		return modelAndView;
+	@PutMapping()
+	public Employee edit(@RequestBody Employee employee) throws InvalidEmployeeIdException {
+		logger.info("editing a employee with " + employee.getName());
+		return employeeService.update(employee);
 	}
 
-	@RequestMapping(value = "updateEmp", method = RequestMethod.POST)
-	public ModelAndView updateEditEmp(@ModelAttribute("empToEdit") Employee employee)
-			throws InvalidEmployeeIdException {
-		employeeService.update(employee);
-		ModelAndView modelAndView = new ModelAndView("redirect:" + "getemps");
-		System.out.println("Employee Updated successfully with id : " + employee.getId());
-		return modelAndView;
+	@DeleteMapping("/{id}")
+	public Employee delete(@PathVariable int id) throws InvalidEmployeeIdException {
+		logger.info("deleting a employee with id " + id);
+		return employeeService.delete(id);
 	}
-
-	@RequestMapping(value = "deleteEmp")
-	public ModelAndView deleteEmp(@RequestParam int id) throws InvalidEmployeeIdException {
-		employeeService.delete(id);
-		ModelAndView modelAndView = new ModelAndView("redirect:" + "getemps");
-		return modelAndView;
-	}
-
-	@RequestMapping(value = "getAllEmp", method = RequestMethod.POST)
-	public ModelAndView findAllEmployeeByDept(@RequestParam int deptid) throws InvalidDepartmentIdException {
-
-		ModelAndView modelAndView = new ModelAndView("showEmployeeByDept");
-		modelAndView.addObject("departmentService", departmentService);
-		List<Employee> emps = employeeService.findAllByDeptno(deptid);
-		modelAndView.addObject("emps",emps);
-
-		return modelAndView;
-
-	}
-
 }
