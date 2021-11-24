@@ -79,4 +79,20 @@
 24-11-2021 13:20:45 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
 24-11-2021 13:20:45 INFO  com.cov.service.DepartmentService:39 - department found with id 1isJava
 24-11-2021 13:20:45 INFO  com.cov.controller.DepartmentController:33 - employee found with id 1 isJava
-24-11-2021 13:
+24-11-2021 13:20:50 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 13:20:50 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 13:20:58 INFO  com.cov.controller.DepartmentController:57 - deleting a department with id 1
+24-11-2021 13:20:58 INFO  com.cov.service.DepartmentService:67 - deleting department with id 1
+24-11-2021 13:20:58 WARN  com.cov.service.DepartmentService:70 - com.cov.exception.InvalidDepartmentIdException: Department id not found
+24-11-2021 13:21:09 INFO  com.cov.controller.DepartmentController:57 - deleting a department with id 5
+24-11-2021 13:21:09 INFO  com.cov.service.DepartmentService:67 - deleting department with id 5
+24-11-2021 13:21:09 WARN  com.cov.service.DepartmentService:70 - com.cov.exception.InvalidDepartmentIdException: Department id not found
+24-11-2021 14:14:32 INFO  com.cov.controller.DepartmentController:57 - deleting a department with id 5
+24-11-2021 14:14:32 INFO  com.cov.service.DepartmentService:67 - deleting department with id 5
+24-11-2021 14:14:32 WARN  com.cov.service.DepartmentService:70 - com.cov.exception.InvalidDepartmentIdException: Department id not found
+24-11-2021 14:14:38 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 14:14:38 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 14:34:16 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 14:34:16 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 14:34:44 INFO  com.cov.controller.EmployeeController:36 - finding all employees
+24-11-2021 14:34:44 INFO  com.cov.service.EmployeeService:24 - finding all employees
