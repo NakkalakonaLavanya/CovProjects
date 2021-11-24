@@ -38,13 +38,13 @@ public class EmployeeController {
 	}
 
 	@PostMapping()
-	public Employee insertPerson(@RequestBody Employee employee) {
+	public Employee insert(@RequestBody Employee employee) {
 		logger.info("inserting a employee with " + employee.getName());
 		return employeeService.save(employee);
 	}
 
 	@PutMapping()
-	public Employee edit(@RequestBody Employee employee) throws InvalidEmployeeIdException {
+	public Employee edit(@RequestBody Employee employee , @PathVariable int id) throws InvalidEmployeeIdException {
 		logger.info("editing a employee with " + employee.getName());
 		return employeeService.update(employee);
 	}
