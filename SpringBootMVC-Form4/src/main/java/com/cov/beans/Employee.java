@@ -10,11 +10,15 @@ import javax.persistence.ManyToOne;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import io.swagger.annotations.ApiModelProperty;
+
 @Entity
 public class Employee {
+	@ApiModelProperty(notes="Auto generated Employee ID by database")
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	int id;
+	@ApiModelProperty(notes="name of the employee")
 	String name;
 
 	@ManyToOne(fetch = FetchType.LAZY, optional = false)
@@ -31,7 +35,7 @@ public class Employee {
 
 	public Employee() {
 		super();
-		// TODO Auto-generated constructor stub
+
 	}
 
 	public int getId() {

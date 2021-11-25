@@ -96,3 +96,75 @@
 24-11-2021 14:34:16 INFO  com.cov.service.DepartmentService:24 - finding all departments
 24-11-2021 14:34:44 INFO  com.cov.controller.EmployeeController:36 - finding all employees
 24-11-2021 14:34:44 INFO  com.cov.service.EmployeeService:24 - finding all employees
+24-11-2021 16:50:14 INFO  com.cov.controller.EmployeeController:36 - finding all employees
+24-11-2021 16:50:14 INFO  com.cov.service.EmployeeService:24 - finding all employees
+24-11-2021 16:51:07 INFO  com.cov.controller.EmployeeController:42 - inserting a employee with lavanyaaa
+24-11-2021 16:51:07 INFO  com.cov.service.EmployeeService:46 - inserting a employee
+24-11-2021 16:51:07 WARN  com.cov.service.EmployeeService:48 - com.cov.exception.InvalidEmployeeIdException: Employee id not found
+24-11-2021 16:51:18 INFO  com.cov.controller.EmployeeController:42 - inserting a employee with lavanyaaa
+24-11-2021 16:51:18 INFO  com.cov.service.EmployeeService:46 - inserting a employee
+24-11-2021 16:51:18 WARN  com.cov.service.EmployeeService:48 - com.cov.exception.InvalidEmployeeIdException: Employee id not found
+24-11-2021 16:51:35 INFO  com.cov.controller.EmployeeController:42 - inserting a employee with lavanyaaa
+24-11-2021 16:51:35 INFO  com.cov.service.EmployeeService:46 - inserting a employee
+24-11-2021 16:51:35 WARN  com.cov.service.EmployeeService:48 - com.cov.exception.InvalidEmployeeIdException: Employee id not found
+24-11-2021 16:55:27 INFO  com.cov.controller.EmployeeController:42 - inserting a employee with lavanyaaa
+24-11-2021 16:55:27 INFO  com.cov.service.EmployeeService:46 - inserting a employee
+24-11-2021 16:55:27 WARN  com.cov.service.EmployeeService:48 - com.cov.exception.InvalidEmployeeIdException: Employee id not found
+24-11-2021 16:55:30 INFO  com.cov.controller.EmployeeController:42 - inserting a employee with lavanyaaa
+24-11-2021 16:55:30 INFO  com.cov.service.EmployeeService:46 - inserting a employee
+24-11-2021 16:55:30 WARN  com.cov.service.EmployeeService:48 - com.cov.exception.InvalidEmployeeIdException: Employee id not found
+24-11-2021 16:55:52 INFO  com.cov.controller.EmployeeController:36 - finding all employees
+24-11-2021 16:55:52 INFO  com.cov.service.EmployeeService:24 - finding all employees
+24-11-2021 16:56:09 INFO  com.cov.controller.EmployeeController:36 - finding all employees
+24-11-2021 16:56:09 INFO  com.cov.service.EmployeeService:24 - finding all employees
+24-11-2021 16:59:06 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 16:59:06 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 16:59:35 INFO  com.cov.controller.DepartmentController:45 - inserting a department with java
+24-11-2021 16:59:35 INFO  com.cov.service.DepartmentService:45 - inserting a departrment
+24-11-2021 16:59:35 WARN  com.cov.service.DepartmentService:47 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:00:07 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 17:00:07 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 17:00:36 INFO  com.cov.controller.DepartmentController:31 - finding a employee with id 2
+24-11-2021 17:00:36 INFO  com.cov.service.DepartmentService:31 - finding employee with id: 2
+24-11-2021 17:00:36 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:00:36 INFO  com.cov.service.DepartmentService:39 - department found with id 2isc
+24-11-2021 17:00:36 INFO  com.cov.controller.DepartmentController:33 - employee found with id 2 isc
+24-11-2021 17:02:57 INFO  com.cov.controller.DepartmentController:31 - finding a employee with id 2
+24-11-2021 17:02:57 INFO  com.cov.service.DepartmentService:31 - finding employee with id: 2
+24-11-2021 17:02:57 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:02:57 INFO  com.cov.service.DepartmentService:39 - department found with id 2isc
+24-11-2021 17:02:57 INFO  com.cov.controller.DepartmentController:33 - employee found with id 2 isc
+24-11-2021 17:03:14 INFO  com.cov.controller.DepartmentController:31 - finding a employee with id 2
+24-11-2021 17:03:14 INFO  com.cov.service.DepartmentService:31 - finding employee with id: 2
+24-11-2021 17:03:14 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:03:14 INFO  com.cov.service.DepartmentService:39 - department found with id 2isc
+24-11-2021 17:03:14 INFO  com.cov.controller.DepartmentController:33 - employee found with id 2 isc
+24-11-2021 17:35:33 INFO  com.cov.controller.DepartmentController:31 - finding a employee with id 2
+24-11-2021 17:35:33 INFO  com.cov.service.DepartmentService:31 - finding employee with id: 2
+24-11-2021 17:35:33 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:35:33 INFO  com.cov.service.DepartmentService:39 - department found with id 2isc
+24-11-2021 17:35:33 INFO  com.cov.controller.DepartmentController:33 - employee found with id 2 isc
+24-11-2021 17:41:59 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 17:41:59 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 17:42:05 INFO  com.cov.controller.DepartmentController:31 - finding a employee with id 1
+24-11-2021 17:42:05 INFO  com.cov.service.DepartmentService:31 - finding employee with id: 1
+24-11-2021 17:42:05 WARN  com.cov.service.DepartmentService:34 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:42:05 INFO  com.cov.service.DepartmentService:39 - department found with id 1isJava
+24-11-2021 17:42:05 INFO  com.cov.controller.DepartmentController:33 - employee found with id 1 isJava
+24-11-2021 17:49:20 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+24-11-2021 17:49:20 INFO  com.cov.service.DepartmentService:24 - finding all departments
+24-11-2021 17:49:53 INFO  com.cov.controller.DepartmentController:45 - inserting a department with Integration
+24-11-2021 17:49:53 INFO  com.cov.service.DepartmentService:45 - inserting a departrment
+24-11-2021 17:49:53 WARN  com.cov.service.DepartmentService:47 - com.cov.exception.InvalidDepartmentIdException: Employee id not found
+24-11-2021 17:50:12 INFO  com.cov.controller.DepartmentController:51 - editing a department with Integration/Java
+24-11-2021 17:50:12 INFO  com.cov.service.DepartmentService:54 - updating department
+24-11-2021 17:50:12 WARN  com.cov.service.DepartmentService:57 - com.cov.exception.InvalidDepartmentIdException: Person id not found
+24-11-2021 17:50:12 INFO  com.cov.service.DepartmentService:62 - department updated isIntegration/Java
+25-11-2021 10:43:19 INFO  com.cov.controller.EmployeeController:36 - finding all employees
+25-11-2021 10:43:20 INFO  com.cov.service.EmployeeService:24 - finding all employees
+25-11-2021 10:43:31 INFO  com.cov.controller.DepartmentController:39 - finding all departments
+25-11-2021 10:43:31 INFO  com.cov.service.DepartmentService:24 - finding all departments
+25-11-2021 11:22:26 INFO  com.cov.controller.DepartmentController:52 - finding all departments
+25-11-2021 11:22:26 INFO  com.cov.service.DepartmentService:24 - finding all departments
+25-11-2021 11:22:33 INFO  com.cov.controller.DepartmentController:52 - finding all departments
+25-11-2021 11:22:33 INFO  com.cov.service.DepartmentService:24 - finding all departments
